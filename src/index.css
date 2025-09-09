@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Tell Tailwind that `dark:` should activate when .dark is on <html> (or inside it) */
+@custom-variant dark (&:where(.dark, .dark *));
+/* (optional) small base tweaks */
+:root {
+  color-scheme: light;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+/* Optional: extra background/text defaults when dark is on */
+html.dark body {
+  background-color: #0b1220;
+}
+html.dark body,
+html.dark .dark\:text {
+  color: #e5e7eb;
+}
